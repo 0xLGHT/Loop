@@ -1,7 +1,7 @@
 let angle = 100;
-let maxPoints = 500;
-let scaleFactor = 75;
-let stepSize = 0.05;
+let maxPoints = 600;
+let scaleFactor = 150;
+let stepSize = 20; // You can adjust this value to control the speed of the spinning circle
 let centerX;
 let centerY;
 
@@ -23,13 +23,7 @@ function draw() {
     let x = sin(angle) * scaleFactor;
     let y = cos(angle) * scaleFactor;
 
-    let offsetX = sin(angle * 2) * scaleFactor * 1.5;
-    let offsetY = cos(angle * 2) * scaleFactor * 1.5;
-
-    let x2 = x + offsetX;
-    let y2 = y + offsetY;
-
-    line(x, y, x2, y2);
+    line(0, 0, x, y);
 
     angle += stepSize;
   }
